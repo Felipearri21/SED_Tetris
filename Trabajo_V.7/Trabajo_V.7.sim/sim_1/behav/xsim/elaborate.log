@@ -1,0 +1,35 @@
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_tetris_top_behav xil_defaultlib.tb_tetris_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=9.125...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_tetris_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_tetris
+Compiling architecture rtl of entity xil_defaultlib.clk_divider [clk_divider_default]
+Compiling architecture rtl of entity xil_defaultlib.input_controller [input_controller_default]
+Compiling architecture rtl of entity xil_defaultlib.lfsr_random [lfsr_random_default]
+Compiling architecture fsm of entity xil_defaultlib.game_controller [game_controller_default]
+Compiling architecture rtl of entity xil_defaultlib.current_piece_ctrl [current_piece_ctrl_default]
+Compiling architecture dataflow of entity xil_defaultlib.piece_rom [piece_rom_default]
+Compiling architecture comb of entity xil_defaultlib.collision_detector [collision_detector_default]
+Compiling architecture rtl of entity xil_defaultlib.board_memory [board_memory_default]
+Compiling architecture rtl of entity xil_defaultlib.vga_controller [vga_controller_default]
+Compiling architecture comb of entity xil_defaultlib.render_unit [render_unit_default]
+Compiling architecture rtl of entity xil_defaultlib.tetris_top [tetris_top_default]
+Compiling architecture tb of entity xil_defaultlib.tb_tetris_top
+Built simulation snapshot tb_tetris_top_behav

@@ -1,0 +1,24 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Trabajo_V.5/Trabajo_V.5.srcs/sources_1/new/1_clock_divider.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'clk_divider'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Trabajo_V.5/Trabajo_V.5.srcs/sources_1/new/2_input_controller.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'input_controller'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Trabajo_V.5/Trabajo_V.5.srcs/sources_1/new/4_lfsr_random.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'lfsr_random'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Trabajo_V.5/Trabajo_V.5.srcs/sources_1/new/8_game_controller.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'game_controller'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Trabajo_V.5/Trabajo_V.5.srcs/sources_1/new/5_current_piece_control.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'current_piece_ctrl'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Trabajo_V.5/Trabajo_V.5.srcs/sources_1/new/3_piece_rotator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'piece_rom'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Trabajo_V.5/Trabajo_V.5.srcs/sources_1/new/6_collision_detector.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'collision_detector'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Trabajo_V.5/Trabajo_V.5.srcs/sources_1/new/7_board_memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'board_memory'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Trabajo_V.5/Trabajo_V.5.srcs/sources_1/new/11_vga_controller.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'vga_controller'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Trabajo_V.5/Trabajo_V.5.srcs/sources_1/new/9_render_unit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'render_unit'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Trabajo_V.5/Trabajo_V.5.srcs/sources_1/new/10_tetris_top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tetris_top'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Trabajo_V.5/Trabajo_V.5.srcs/sim_1/new/10_tb_tetris_top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_tetris_top'

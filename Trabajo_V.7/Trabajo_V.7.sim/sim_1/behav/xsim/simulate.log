@@ -1,0 +1,6 @@
+Time resolution is 1 ps
+ERROR: Index -2147483648 out of bound 0 to 3
+Time: 0 ps  Iteration: 0  Process: /tb_tetris_top/DUT/col_inst/NEXT_SHAPE/line__100
+  File: C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Trabajo_V.5/Trabajo_V.5.srcs/sources_1/new/3_piece_rotator.vhd
+
+HDL Line: C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Trabajo_V.5/Trabajo_V.5.srcs/sources_1/new/3_piece_rotator.vhd:100

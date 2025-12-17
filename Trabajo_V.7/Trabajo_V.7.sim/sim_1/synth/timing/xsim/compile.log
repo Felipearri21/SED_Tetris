@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Trabajo/Trabajo.sim/sim_1/synth/timing/xsim/tb_tetris_top_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_divider
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Trabajo/Trabajo.srcs/sim_1/new/10_tb_tetris_top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_tetris_top'
+ERROR: [VRFC 10-2987] 'tetris_top' is not compiled in library 'xil_defaultlib' [C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Trabajo/Trabajo.srcs/sim_1/new/10_tb_tetris_top.vhd:59]
+ERROR: [VRFC 10-9458] unit 'tb' is ignored due to previous errors [C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Trabajo/Trabajo.srcs/sim_1/new/10_tb_tetris_top.vhd:8]
+INFO: [VRFC 10-8704] VHDL file 'C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Trabajo/Trabajo.srcs/sim_1/new/10_tb_tetris_top.vhd' is ignored due to errors

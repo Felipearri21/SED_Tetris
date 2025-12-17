@@ -1,0 +1,3 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Trabajo/Trabajo.sim/sim_1/synth/timing/xsim/tb_tetris_top_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_divider
+INFO: [VRFC 10-311] analyzing module glbl

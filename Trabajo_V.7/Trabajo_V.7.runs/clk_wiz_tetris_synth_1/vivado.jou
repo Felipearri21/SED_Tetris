@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Wed Dec 10 13:46:24 2025
+# Process ID: 4060
+# Current directory: C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Trabajo_V.5/Trabajo_V.5.runs/clk_wiz_tetris_synth_1
+# Command line: vivado.exe -log clk_wiz_tetris.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source clk_wiz_tetris.tcl
+# Log file: C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Trabajo_V.5/Trabajo_V.5.runs/clk_wiz_tetris_synth_1/clk_wiz_tetris.vds
+# Journal file: C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Trabajo_V.5/Trabajo_V.5.runs/clk_wiz_tetris_synth_1\vivado.jou
+# Running On        :Pepo
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26100
+# Processor Detail  :Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
+# CPU Frequency     :2592 MHz
+# CPU Physical cores:6
+# CPU Logical cores :12
+# Host memory       :17023 MB
+# Swap memory       :2119 MB
+# Total Virtual     :19142 MB
+# Available Virtual :4618 MB
+#-----------------------------------------------------------
+source clk_wiz_tetris.tcl -notrace
