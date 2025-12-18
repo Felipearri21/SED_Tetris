@@ -1,8 +1,8 @@
 -------------------------------------
 | Tool Version : Vivado v.2025.1
-| Date         : Thu Dec 18 18:25:46 2025
+| Date         : Thu Dec 18 19:29:24 2025
 | Host         : DESKTOP-KCUO3LM
-| Design       : checkpoint_tetris_top
+| Design       : design_1
 | Device       : xc7a100t-csg324-1--
 -------------------------------------
 

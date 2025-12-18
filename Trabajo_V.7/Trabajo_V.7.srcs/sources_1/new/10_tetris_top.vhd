@@ -16,7 +16,7 @@ entity tetris_top is
         btn_rot   : in std_logic;
         btn_drop  : in std_logic;
 
-        -- Senales VGA
+        -- Señales VGA
         vga_hsync : out std_logic;
         vga_vsync : out std_logic;
         vga_r     : out std_logic_vector(3 downto 0);
@@ -25,16 +25,14 @@ entity tetris_top is
     );
 end entity;
 
-
 architecture RTL of tetris_top is
 
     -------------------------------------------------------------------------
-    -- CLOCK WIZARD: reloj del juego
+    -- CLOCK WIZARD
     -------------------------------------------------------------------------
-    signal clk_game   : std_logic;  -- reloj lento generado por el clock wizard
-    signal clk_locked : std_logic;  -- indica que el reloj esta estable
+    signal clk_game   : std_logic;
+    signal clk_locked : std_logic;
 
-    -- Ajusta el nombre del componente y puertos a tu IP real
     component clk_wiz_tetris
         port (
             clk_in1  : in  std_logic;
@@ -45,35 +43,33 @@ architecture RTL of tetris_top is
     end component;
 
     -------------------------------------------------------------------------
-    -- SENIALES INTERNAS DEL JUEGO
+    -- SEÑALES INTERNAS
     -------------------------------------------------------------------------
     signal reset_sync : std_logic;
 
     signal p_left, p_right, p_rot, p_drop : std_logic;
-
     signal tick_game, tick_drop : std_logic;
 
     signal random_id : integer;
     signal piece_id  : integer;
-
-    signal rotation : integer;
-    signal x_pos    : integer;
-    signal y_pos    : integer;
+    signal rotation  : integer;
+    signal x_pos     : integer;
+    signal y_pos     : integer;
 
     signal can_l, can_r, can_rot, can_d : std_logic;
 
     signal spawn_new_piece : std_logic;
-    signal do_line_clear   : std_logic;
-    signal lock_request    : std_logic;
+    signal clear_enable    : std_logic;   -- pulso para borrar líneas (desde game_controller)
+    signal lock_request    : std_logic;   -- pieza no puede bajar (desde current_piece_ctrl)
 
-    signal board_flat      : std_logic_vector(BOARD_WIDTH*BOARD_HEIGHT-1 downto 0);
-    signal rows_cleared    : std_logic_vector(BOARD_HEIGHT-1 downto 0);
-    signal any_row_cleared : std_logic;
+    signal board_flat : std_logic_vector(BOARD_WIDTH*BOARD_HEIGHT-1 downto 0);
+    signal shape_16b  : std_logic_vector(15 downto 0);
 
-    signal shape_16b : std_logic_vector(15 downto 0);
+    -- NUEVO: info real desde board_memory hacia game_controller
+    signal any_row_full : std_logic;
 
     -------------------------------------------------------------------------
-    -- VGA signals
+    -- VGA
     -------------------------------------------------------------------------
     signal pixel_clk    : std_logic;
     signal pixel_x      : integer;
@@ -84,28 +80,20 @@ architecture RTL of tetris_top is
 begin
 
     -------------------------------------------------------------------------
-    -- INSTANCIA DEL CLOCK WIZARD
-    -- clk_100MHz (oscilador placa) -> clk_game (reloj mas lento para el juego)
+    -- CLOCK WIZARD
     -------------------------------------------------------------------------
     u_clk_wiz : clk_wiz_tetris
         port map (
             clk_in1  => clk_100MHz,
-            -- si tu IP usa resetn activo a nivel bajo, cambia esto a resetn => '1'
-            reset    => '0',          -- sin reset del wizard (opcional)
+            reset    => '0',
             clk_out1 => clk_game,
             locked   => clk_locked
         );
 
-    -------------------------------------------------------------------------
-    -- RESET sincronizado para la logica del juego
-    -- Se mantiene en reset mientras el clock wizard no este bloqueado
-    -------------------------------------------------------------------------
     reset_sync <= (not reset_btn) or (not clk_locked);
 
-
     -------------------------------------------------------------------------
-    -- DIVISOR DE RELOJ DEL JUEGO
-    -- Ahora trabaja con clk_game en lugar de clk_100MHz
+    -- DIVISOR DE RELOJ
     -------------------------------------------------------------------------
     clkdiv_inst : entity work.clk_divider
         port map (
@@ -115,9 +103,8 @@ begin
             tick_drop => tick_drop
         );
 
-
     -------------------------------------------------------------------------
-    -- CONTROL DE BOTONES (sincronizado a clk_game)
+    -- INPUT CONTROLLER
     -------------------------------------------------------------------------
     input_ctrl_inst : entity work.input_controller
         port map (
@@ -135,9 +122,8 @@ begin
             p_drop  => p_drop
         );
 
-
     -------------------------------------------------------------------------
-    -- LFSR RANDOM (clk_game)
+    -- RANDOM
     -------------------------------------------------------------------------
     random_inst : entity work.lfsr_random
         port map (
@@ -146,9 +132,9 @@ begin
             random_out => random_id
         );
 
-
     -------------------------------------------------------------------------
-    -- FSM PRINCIPAL DEL JUEGO (clk_game)
+    -- GAME CONTROLLER
+    -- CORREGIDO: any_row_cleared debe venir del board_memory (any_row_full)
     -------------------------------------------------------------------------
     game_ctrl_inst : entity work.game_controller
         port map (
@@ -156,17 +142,16 @@ begin
             reset           => reset_sync,
 
             lock_request    => lock_request,
-            any_row_cleared => any_row_cleared,
+            any_row_cleared => any_row_full,   -- ✅ antes estaba mal
 
             spawn_new_piece => spawn_new_piece,
-            do_line_clear   => do_line_clear,
+            do_line_clear   => clear_enable,
 
             game_state => open
         );
 
-
     -------------------------------------------------------------------------
-    -- CONTROL DE LA PIEZA ACTUAL (clk_game)
+    -- PIEZA ACTUAL
     -------------------------------------------------------------------------
     piece_ctrl_inst : entity work.current_piece_ctrl
         generic map (
@@ -202,9 +187,8 @@ begin
             lock_request => lock_request
         );
 
-
     -------------------------------------------------------------------------
-    -- ROM DE PIEZAS (combinacional)
+    -- ROM PIEZAS
     -------------------------------------------------------------------------
     rom_inst : entity work.piece_rom
         port map (
@@ -213,9 +197,8 @@ begin
             shape_16b => shape_16b
         );
 
-
     -------------------------------------------------------------------------
-    -- DETECTOR DE COLISIONES (combinacional)
+    -- COLISIONES
     -------------------------------------------------------------------------
     col_inst : entity work.collision_detector
         generic map (
@@ -235,9 +218,9 @@ begin
             can_rotate     => can_rot
         );
 
-
     -------------------------------------------------------------------------
-    -- MEMORIA DEL TABLERO (clk_game)
+    -- BOARD MEMORY
+    -- NUEVO: expone any_row_full
     -------------------------------------------------------------------------
     board_inst : entity work.board_memory
         generic map (
@@ -248,22 +231,20 @@ begin
             clk          => clk_game,
             reset        => reset_sync,
 
-            x         => x_pos,
-            y         => y_pos,
-            shape_16b => shape_16b,
+            piece_x      => x_pos,
+            piece_y      => y_pos,
+            piece_mask   => shape_16b,
 
-            lock_request  => lock_request,
-            do_line_clear => do_line_clear,
+            lock_piece   => lock_request,
+            clear_enable => clear_enable,
 
-            board_flat      => board_flat,
-            rows_cleared    => rows_cleared,
-            any_row_cleared => any_row_cleared
+            any_row_full => any_row_full,   -- ✅ nuevo
+
+            board_out    => board_flat
         );
 
-
     -------------------------------------------------------------------------
-    -- CONTROLADOR VGA
-    -- Sigue usando clk_100MHz como antes (internamente generara pixel_clk)
+    -- VGA CONTROLLER
     -------------------------------------------------------------------------
     vga_inst : entity work.vga_controller
         port map (
@@ -279,9 +260,8 @@ begin
             pixel_y      => pixel_y
         );
 
-
     -------------------------------------------------------------------------
-    -- RENDER VGA DEL TETRIS (por pixel, combinacional)
+    -- RENDER
     -------------------------------------------------------------------------
     render_inst : entity work.render_unit
         generic map (
@@ -302,12 +282,11 @@ begin
             rgb          => rgb
         );
 
-
     -------------------------------------------------------------------------
-    -- ASIGNACION FINAL A PINES VGA
+    -- SALIDA VGA
     -------------------------------------------------------------------------
-    vga_r <= rgb(11 downto 8);  -- rojo 4-bit
-    vga_g <= rgb(7  downto 4);  -- verde 4-bit
-    vga_b <= rgb(3  downto 0);  -- azul 4-bit
+    vga_r <= rgb(11 downto 8);
+    vga_g <= rgb(7 downto 4);
+    vga_b <= rgb(3 downto 0);
 
 end architecture RTL;
