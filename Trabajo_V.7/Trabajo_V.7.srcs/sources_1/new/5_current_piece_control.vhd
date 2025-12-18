@@ -18,7 +18,7 @@ entity current_piece_ctrl is
         drop_pulse  : in std_logic;
 
         -- Tiempos
-        tick_game : in std_logic;
+        tick_game : in std_logic;  -- (ya no se usa para botones)
         tick_drop : in std_logic;
 
         -- Colisiones
@@ -44,7 +44,6 @@ entity current_piece_ctrl is
     );
 end entity current_piece_ctrl;
 
-
 architecture RTL of current_piece_ctrl is
 
     -- Registros internos
@@ -60,7 +59,7 @@ architecture RTL of current_piece_ctrl is
 begin
 
     -------------------------------------------------------------------------
-    -- Proceso principal
+    -- PROCESO PRINCIPAL
     -------------------------------------------------------------------------
     process(clk, reset)
     begin
@@ -74,7 +73,7 @@ begin
 
         elsif rising_edge(clk) then
 
-            -- Por defecto no pedimos fijado en este ciclo
+            -- Por defecto no pedimos fijado
             lock_req_reg <= '0';
 
             -----------------------------------------------------------------
@@ -82,7 +81,7 @@ begin
             -----------------------------------------------------------------
             if spawn_new_piece = '1' then
 
-                piece_id_reg <= random_id;   -- Latch aleatorio
+                piece_id_reg <= random_id;
                 x_reg        <= SPAWN_X;
                 y_reg        <= SPAWN_Y;
                 rot_reg      <= 0;
@@ -90,26 +89,22 @@ begin
             else
 
                 -----------------------------------------------------------------
-                -- 2. Movimientos con tick_game
+                -- 2. MOVIMIENTOS INMEDIATOS POR BOTÓN
                 -----------------------------------------------------------------
-                if tick_game = '1' then
+                if left_pulse = '1' and can_move_left = '1' then
+                    x_reg <= x_reg - 1;
+                end if;
 
-                    if left_pulse = '1' and can_move_left = '1' then
-                        x_reg <= x_reg - 1;
-                    end if;
+                if right_pulse = '1' and can_move_right = '1' then
+                    x_reg <= x_reg + 1;
+                end if;
 
-                    if right_pulse = '1' and can_move_right = '1' then
-                        x_reg <= x_reg + 1;
-                    end if;
-
-                    if rot_pulse = '1' and can_rotate = '1' then
-                        rot_reg <= (rot_reg + 1) mod 4;
-                    end if;
-
+                if rot_pulse = '1' and can_rotate = '1' then
+                    rot_reg <= (rot_reg + 1) mod 4;
                 end if;
 
                 -----------------------------------------------------------------
-                -- 3. Caída automática
+                -- 3. CAÍDA AUTOMÁTICA
                 -----------------------------------------------------------------
                 if tick_drop = '1' then
                     if can_move_down = '1' then
@@ -120,7 +115,7 @@ begin
                 end if;
 
                 -----------------------------------------------------------------
-                -- 4. Caída manual
+                -- 4. CAÍDA MANUAL
                 -----------------------------------------------------------------
                 if drop_pulse = '1' then
                     if can_move_down = '1' then
@@ -136,7 +131,7 @@ begin
     end process;
 
     -------------------------------------------------------------------------
-    -- Salidas
+    -- SALIDAS
     -------------------------------------------------------------------------
     x            <= x_reg;
     y            <= y_reg;
@@ -145,3 +140,4 @@ begin
     lock_request <= lock_req_reg;
 
 end architecture RTL;
+

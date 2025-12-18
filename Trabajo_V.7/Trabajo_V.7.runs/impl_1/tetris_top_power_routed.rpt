@@ -1,8 +1,8 @@
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date             : Wed Dec 17 16:44:23 2025
-| Host             : Pepo running 64-bit major release  (build 9200)
+| Tool Version     : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date             : Thu Dec 18 18:26:19 2025
+| Host             : DESKTOP-KCUO3LM running 64-bit major release  (build 9200)
 | Command          : report_power -file tetris_top_power_routed.rpt -pb tetris_top_power_summary_routed.pb -rpx tetris_top_power_routed.rpx
 | Design           : tetris_top
 | Device           : xc7a100tcsg324-1
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.225        |
+| Total On-Chip Power (W)  | 0.224        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.127        |
@@ -53,17 +53,17 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.002 |        6 |       --- |             --- |
-| Slice Logic    |     0.004 |     5350 |       --- |             --- |
-|   LUT as Logic |     0.004 |     3185 |     63400 |            5.02 |
-|   CARRY4       |    <0.001 |      434 |     15850 |            2.74 |
-|   F7/F8 Muxes  |    <0.001 |      612 |     63400 |            0.97 |
-|   Register     |    <0.001 |      489 |    126800 |            0.39 |
+| Slice Logic    |     0.004 |     5206 |       --- |             --- |
+|   LUT as Logic |     0.004 |     3128 |     63400 |            4.93 |
+|   CARRY4       |    <0.001 |      426 |     15850 |            2.69 |
+|   F7/F8 Muxes  |    <0.001 |      588 |     63400 |            0.93 |
+|   Register     |    <0.001 |      453 |    126800 |            0.36 |
 |   Others       |     0.000 |       13 |       --- |             --- |
-| Signals        |     0.005 |     3463 |       --- |             --- |
+| Signals        |     0.005 |     3365 |       --- |             --- |
 | MMCM           |     0.116 |        1 |         6 |           16.67 |
 | I/O            |    <0.001 |       20 |       210 |            9.52 |
 | Static Power   |     0.097 |          |           |                 |
-| Total          |     0.225 |          |           |                 |
+| Total          |     0.224 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.027 |       0.011 |      0.015 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.026 |       0.011 |      0.015 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.082 |       0.064 |      0.018 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -146,7 +146,7 @@ Table of Contents
 | Name              | Power (W) |
 +-------------------+-----------+
 | tetris_top        |     0.127 |
-|   board_inst      |     0.006 |
+|   board_inst      |     0.005 |
 |   piece_ctrl_inst |     0.003 |
 |   u_clk_wiz       |     0.116 |
 |     inst          |     0.116 |

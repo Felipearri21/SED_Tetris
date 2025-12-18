@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Tetris_V.7/Tetris_V.7.runs/synth_1/tetris_top.tcl"
+  variable script "C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.runs/synth_1/tetris_top.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,12 +56,9 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 3
-set_param checkpoint.writeSynthRtdsInDcp 1
-set_param synth.incrementalSynthesisCache C:/Users/G531GW/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-20580-Pepo/incrSyn
+set_param chipscope.maxJobs 5
+set_param general.usePosixSpawnForFork 1
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -69,34 +66,34 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Tetris_V.7/Tetris_V.7.cache/wt [current_project]
-set_property parent.project_path C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Tetris_V.7/Tetris_V.7.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.cache/wt [current_project]
+set_property parent.project_path C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.xpr [current_project]
 set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property board_part_repo_paths {C:/Users/G531GW/AppData/Roaming/Xilinx/Vivado/2024.1/xhub/board_store/xilinx_board_store} [current_project]
+set_property board_part_repo_paths {C:/Users/User/AppData/Roaming/Xilinx/Vivado/2025.1/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
-set_property ip_output_repo c:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Tetris_V.7/Tetris_V.7.cache/ip [current_project]
+set_property ip_output_repo c:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Tetris_V.7/Tetris_V.7.srcs/sources_1/new/1_clock_divider.vhd
-  C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Tetris_V.7/Tetris_V.7.srcs/sources_1/new/2_input_controller.vhd
-  C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Tetris_V.7/Tetris_V.7.srcs/sources_1/new/4_lfsr_random.vhd
-  C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Tetris_V.7/Tetris_V.7.srcs/sources_1/new/8_game_controller.vhd
-  C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Tetris_V.7/Tetris_V.7.srcs/sources_1/new/5_current_piece_control.vhd
-  C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Tetris_V.7/Tetris_V.7.srcs/sources_1/new/3_piece_rotator.vhd
-  C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Tetris_V.7/Tetris_V.7.srcs/sources_1/new/6_collision_detector.vhd
-  C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Tetris_V.7/Tetris_V.7.srcs/sources_1/new/7_board_memory.vhd
-  C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Tetris_V.7/Tetris_V.7.srcs/sources_1/new/11_vga_controller.vhd
-  C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Tetris_V.7/Tetris_V.7.srcs/sources_1/new/9_render_unit.vhd
-  C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Tetris_V.7/Tetris_V.7.srcs/sources_1/new/10_tetris_top.vhd
+  C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/1_clock_divider.vhd
+  C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/2_input_controller.vhd
+  C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/4_lfsr_random.vhd
+  C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/8_game_controller.vhd
+  C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/5_current_piece_control.vhd
+  C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/3_piece_rotator.vhd
+  C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/6_collision_detector.vhd
+  C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/7_board_memory.vhd
+  C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/11_vga_controller.vhd
+  C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/9_render_unit.vhd
+  C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/10_tetris_top.vhd
 }
-read_ip -quiet C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Tetris_V.7/Tetris_V.7.srcs/sources_1/ip/clk_wiz_tetris/clk_wiz_tetris.xci
-set_property used_in_implementation false [get_files -all c:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Tetris_V.7/Tetris_V.7.gen/sources_1/ip/clk_wiz_tetris/clk_wiz_tetris_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Tetris_V.7/Tetris_V.7.gen/sources_1/ip/clk_wiz_tetris/clk_wiz_tetris.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Tetris_V.7/Tetris_V.7.gen/sources_1/ip/clk_wiz_tetris/clk_wiz_tetris_ooc.xdc]
+read_ip -quiet C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/ip/clk_wiz_tetris/clk_wiz_tetris.xci
+set_property used_in_implementation false [get_files -all c:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.gen/sources_1/ip/clk_wiz_tetris/clk_wiz_tetris_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.gen/sources_1/ip/clk_wiz_tetris/clk_wiz_tetris.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.gen/sources_1/ip/clk_wiz_tetris/clk_wiz_tetris_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -107,12 +104,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Tetris_V.7/Tetris_V.7.srcs/constrs_1/imports/FPGAs/Nexys-4-DDR-Master.xdc
-set_property used_in_implementation false [get_files C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Tetris_V.7/Tetris_V.7.srcs/constrs_1/imports/FPGAs/Nexys-4-DDR-Master.xdc]
+read_xdc C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/constrs_1/imports/FPGAs/Nexys-4-DDR-Master.xdc
+set_property used_in_implementation false [get_files C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/constrs_1/imports/FPGAs/Nexys-4-DDR-Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Tetris_V.7/Tetris_V.7.srcs/utils_1/imports/synth_1/tetris_top.dcp
+read_checkpoint -auto_incremental -incremental C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/utils_1/imports/synth_1/tetris_top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

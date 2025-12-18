@@ -1,8 +1,8 @@
 -------------------------------------
-| Tool Version : Vivado v.2024.1
-| Date         : Wed Dec 17 16:43:38 2025
-| Host         : Pepo
-| Design       : design_1
+| Tool Version : Vivado v.2025.1
+| Date         : Thu Dec 18 18:25:46 2025
+| Host         : DESKTOP-KCUO3LM
+| Design       : checkpoint_tetris_top
 | Device       : xc7a100t-csg324-1--
 -------------------------------------
 

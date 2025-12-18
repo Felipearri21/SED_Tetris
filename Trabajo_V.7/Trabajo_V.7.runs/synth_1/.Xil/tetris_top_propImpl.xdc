@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Tetris/Tetris_V.7/Tetris_V.7.srcs/constrs_1/imports/FPGAs/Nexys-4-DDR-Master.xdc rfile:../../../Tetris_V.7.srcs/constrs_1/imports/FPGAs/Nexys-4-DDR-Master.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/constrs_1/imports/FPGAs/Nexys-4-DDR-Master.xdc rfile:../../../Trabajo_V.7.srcs/constrs_1/imports/FPGAs/Nexys-4-DDR-Master.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN E3    IOSTANDARD LVCMOS33 } [get_ports { clk_100MHz }]; #IO_L12P_T1_MRCC_35 Sch=clk100mhz
 set_property src_info {type:XDC file:1 line:82 export:INPUT save:INPUT read:READ} [current_design]

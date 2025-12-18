@@ -1,8 +1,8 @@
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Wed Dec 17 16:44:21 2025
-| Host         : Pepo running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date         : Thu Dec 18 18:26:18 2025
+| Host         : DESKTOP-KCUO3LM running 64-bit major release  (build 9200)
 | Command      : report_methodology -file tetris_top_methodology_drc_routed.rpt -pb tetris_top_methodology_drc_routed.pb -rpx tetris_top_methodology_drc_routed.rpx
 | Design       : tetris_top
 | Device       : xc7a100tcsg324-1
@@ -20,19 +20,19 @@ Table of Contents
 1. REPORT SUMMARY
 -----------------
             Netlist: netlist
-          Floorplan: design_1
+          Floorplan: checkpoint_tetris_top
       Design limits: <entire design considered>
-             Max violations: <unlimited>
-             Violations found: 24
-+-----------+------------------+------------------------------------------------------------------+------------+
-| Rule      | Severity         | Description                                                      | Violations |
-+-----------+------------------+------------------------------------------------------------------+------------+
-| TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree               | 1          |
-| TIMING-17 | Critical Warning | Non-clocked sequential cell                                      | 20         |
-| TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin                        | 1          |
-| CKLD-2    | Warning          | Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads | 1          |
-| LUTAR-1   | Warning          | LUT drives async reset alert                                     | 1          |
-+-----------+------------------+------------------------------------------------------------------+------------+
+             Max checks: <unlimited>
+             Checks found: 24
++-----------+------------------+------------------------------------------------------------------+--------+
+| Rule      | Severity         | Description                                                      | Checks |
++-----------+------------------+------------------------------------------------------------------+--------+
+| TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree               | 1      |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell                                      | 20     |
+| TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin                        | 1      |
+| CKLD-2    | Warning          | Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads | 1      |
+| LUTAR-1   | Warning          | LUT drives async reset alert                                     | 1      |
++-----------+------------------+------------------------------------------------------------------+--------+
 
 2. REPORT DETAILS
 -----------------
@@ -153,14 +153,14 @@ Related violations: <none>
 
 LUTAR-1#1 Warning
 LUT drives async reset alert  
-LUT cell board_inst/cnt_game[31]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) vga_inst/h_count_reg[5]/CLR, vga_inst/h_count_reg[6]/CLR,
+LUT cell board_inst/cnt_drop[31]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) vga_inst/h_count_reg[5]/CLR, vga_inst/h_count_reg[6]/CLR,
 vga_inst/h_count_reg[7]/CLR, vga_inst/h_count_reg[8]/CLR,
 vga_inst/h_count_reg[9]/CLR, vga_inst/v_count_reg[0]/CLR,
 vga_inst/v_count_reg[1]/CLR, vga_inst/v_count_reg[2]/CLR,
 vga_inst/v_count_reg[3]/CLR, vga_inst/v_count_reg[4]/CLR,
 vga_inst/v_count_reg[5]/CLR, vga_inst/v_count_reg[6]/CLR,
 vga_inst/v_count_reg[7]/CLR, vga_inst/v_count_reg[8]/CLR,
-vga_inst/v_count_reg[9]/CLR (the first 15 of 411 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+vga_inst/v_count_reg[9]/CLR (the first 15 of 375 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 
