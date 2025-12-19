@@ -11,32 +11,35 @@ entity board_memory is
         clk   : in std_logic;
         reset : in std_logic;
 
-        -- Control
         lock_piece   : in std_logic;
         clear_enable : in std_logic;
 
-        -- Pieza actual
-        piece_x    : in integer range 0 to BOARD_WIDTH-1;
-        piece_y    : in integer range 0 to BOARD_HEIGHT-1;
-        piece_mask : in std_logic_vector(15 downto 0);
+        piece_x     : in integer;
+        piece_y     : in integer;
+        piece_mask  : in std_logic_vector(15 downto 0);
+        piece_color : in std_logic_vector(2 downto 0);
 
-        -- Info real para la FSM
         any_row_full : out std_logic;
 
-        -- Salida para render
-        board_out : out std_logic_vector(BOARD_WIDTH*BOARD_HEIGHT-1 downto 0)
+        board_filled_flat : out std_logic_vector(BOARD_WIDTH*BOARD_HEIGHT-1 downto 0);
+        board_color_flat  : out std_logic_vector(BOARD_WIDTH*BOARD_HEIGHT*3-1 downto 0)
     );
 end entity;
 
 architecture RTL of board_memory is
 
-    type board_t is array (0 to BOARD_HEIGHT-1, 0 to BOARD_WIDTH-1) of std_logic;
-    signal board : board_t := (others => (others => '0'));
+    type cell_t is record
+        filled : std_logic;
+        color  : std_logic_vector(2 downto 0);
+    end record;
+
+    type board_t is array (0 to BOARD_HEIGHT-1, 0 to BOARD_WIDTH-1) of cell_t;
+    signal board : board_t := (others => (others => ('0',"000")));
 
 begin
 
     -------------------------------------------------------------------------
-    -- Aplanado del tablero
+    -- Aplanado
     -------------------------------------------------------------------------
     flatten : process(board)
         variable idx : integer := 0;
@@ -44,44 +47,42 @@ begin
         idx := 0;
         for y in 0 to BOARD_HEIGHT-1 loop
             for x in 0 to BOARD_WIDTH-1 loop
-                board_out(idx) <= board(y,x);
+                board_filled_flat(idx) <= board(y,x).filled;
+                board_color_flat(3*idx+2 downto 3*idx) <= board(y,x).color;
                 idx := idx + 1;
             end loop;
         end loop;
     end process;
 
     -------------------------------------------------------------------------
-    -- Proceso principal
+    -- Lógica principal
     -------------------------------------------------------------------------
-    main : process(clk)
+    process(clk)
         variable temp_board : board_t;
         variable new_board  : board_t;
 
         variable row_full   : std_logic_vector(0 to BOARD_HEIGHT-1);
+        variable full       : std_logic;
         variable any_full   : std_logic;
 
         variable write_row  : integer;
 
         variable px, py     : integer;
-        variable bit_row    : integer;
-        variable bit_col    : integer;
-
-        variable full       : std_logic;
+        variable bit_row, bit_col : integer;
     begin
         if rising_edge(clk) then
             if reset = '1' then
-                board        <= (others => (others => '0'));
+                board <= (others => (others => ('0',"000")));
                 any_row_full <= '0';
 
             else
                 -----------------------------------------------------------------
-                -- 0) Partimos del tablero actual
+                -- 0) Copiamos estado actual
                 -----------------------------------------------------------------
                 temp_board := board;
 
                 -----------------------------------------------------------------
-                -- 1) LOCK: fijar pieza (MISMO MAPEADO que collision_detector)
-                --    bit 15 = (row0,col0), bit 0 = (row3,col3)
+                -- 1) Fijar pieza en temp_board (mismo mapeado 15-i)
                 -----------------------------------------------------------------
                 if lock_piece = '1' then
                     for i in 0 to 15 loop
@@ -94,7 +95,8 @@ begin
 
                             if (px >= 0 and px < BOARD_WIDTH and
                                 py >= 0 and py < BOARD_HEIGHT) then
-                                temp_board(py, px) := '1';
+                                temp_board(py,px).filled := '1';
+                                temp_board(py,px).color  := piece_color;
                             end if;
                         end if;
                     end loop;
@@ -107,9 +109,8 @@ begin
                 for y in 0 to BOARD_HEIGHT-1 loop
                     full := '1';
                     for x in 0 to BOARD_WIDTH-1 loop
-                        full := full and temp_board(y, x);
+                        full := full and temp_board(y,x).filled;
                     end loop;
-
                     row_full(y) := full;
                     if full = '1' then
                         any_full := '1';
@@ -119,22 +120,24 @@ begin
                 any_row_full <= any_full;
 
                 -----------------------------------------------------------------
-                -- 3) Borrar líneas (solo si hay alguna)
+                -- 3) Borrado de líneas (solo cuando lo ordena la FSM)
                 -----------------------------------------------------------------
                 if (clear_enable = '1') and (any_full = '1') then
 
+                    -- vaciar new_board
                     for y in 0 to BOARD_HEIGHT-1 loop
                         for x in 0 to BOARD_WIDTH-1 loop
-                            new_board(y, x) := '0';
+                            new_board(y,x).filled := '0';
+                            new_board(y,x).color  := "000";
                         end loop;
                     end loop;
 
+                    -- compactar hacia abajo
                     write_row := BOARD_HEIGHT - 1;
-
                     for y in BOARD_HEIGHT-1 downto 0 loop
                         if row_full(y) = '0' then
                             for x in 0 to BOARD_WIDTH-1 loop
-                                new_board(write_row, x) := temp_board(y, x);
+                                new_board(write_row,x) := temp_board(y,x);
                             end loop;
                             write_row := write_row - 1;
                         end if;
@@ -144,7 +147,7 @@ begin
                 end if;
 
                 -----------------------------------------------------------------
-                -- 4) Única escritura final
+                -- 4) Commit único
                 -----------------------------------------------------------------
                 board <= temp_board;
 

@@ -16,7 +16,7 @@ entity tetris_top is
         btn_rot   : in std_logic;
         btn_drop  : in std_logic;
 
-        -- Señales VGA
+        -- VGA
         vga_hsync : out std_logic;
         vga_vsync : out std_logic;
         vga_r     : out std_logic_vector(3 downto 0);
@@ -55,18 +55,20 @@ architecture RTL of tetris_top is
     signal rotation  : integer;
     signal x_pos     : integer;
     signal y_pos     : integer;
+    signal piece_color : std_logic_vector(2 downto 0);
 
     signal can_l, can_r, can_rot, can_d : std_logic;
 
     signal spawn_new_piece : std_logic;
-    signal clear_enable    : std_logic;   -- pulso para borrar líneas (desde game_controller)
-    signal lock_request    : std_logic;   -- pieza no puede bajar (desde current_piece_ctrl)
+    signal clear_enable    : std_logic;
+    signal lock_request    : std_logic;
 
-    signal board_flat : std_logic_vector(BOARD_WIDTH*BOARD_HEIGHT-1 downto 0);
-    signal shape_16b  : std_logic_vector(15 downto 0);
-
-    -- NUEVO: info real desde board_memory hacia game_controller
     signal any_row_full : std_logic;
+
+    signal board_filled_flat : std_logic_vector(BOARD_WIDTH*BOARD_HEIGHT-1 downto 0);
+    signal board_color_flat  : std_logic_vector(BOARD_WIDTH*BOARD_HEIGHT*3-1 downto 0);
+
+    signal shape_16b : std_logic_vector(15 downto 0);
 
     -------------------------------------------------------------------------
     -- VGA
@@ -134,7 +136,6 @@ begin
 
     -------------------------------------------------------------------------
     -- GAME CONTROLLER
-    -- CORREGIDO: any_row_cleared debe venir del board_memory (any_row_full)
     -------------------------------------------------------------------------
     game_ctrl_inst : entity work.game_controller
         port map (
@@ -142,7 +143,7 @@ begin
             reset           => reset_sync,
 
             lock_request    => lock_request,
-            any_row_cleared => any_row_full,   -- ✅ antes estaba mal
+            any_row_cleared => any_row_full,
 
             spawn_new_piece => spawn_new_piece,
             do_line_clear   => clear_enable,
@@ -176,13 +177,13 @@ begin
             can_move_down  => can_d,
 
             spawn_new_piece => spawn_new_piece,
+            random_id       => random_id,
 
-            random_id => random_id,
-            piece_id  => piece_id,
-
-            rotation => rotation,
-            x        => x_pos,
-            y        => y_pos,
+            piece_id    => piece_id,
+            rotation    => rotation,
+            x           => x_pos,
+            y           => y_pos,
+            piece_color => piece_color,
 
             lock_request => lock_request
         );
@@ -210,7 +211,7 @@ begin
             rotation   => rotation,
             x          => x_pos,
             y          => y_pos,
-            board_flat => board_flat,
+            board_flat => board_filled_flat,
 
             can_move_left  => can_l,
             can_move_right => can_r,
@@ -219,8 +220,7 @@ begin
         );
 
     -------------------------------------------------------------------------
-    -- BOARD MEMORY
-    -- NUEVO: expone any_row_full
+    -- BOARD MEMORY (con color)
     -------------------------------------------------------------------------
     board_inst : entity work.board_memory
         generic map (
@@ -228,19 +228,21 @@ begin
             BOARD_HEIGHT => BOARD_HEIGHT
         )
         port map (
-            clk          => clk_game,
-            reset        => reset_sync,
+            clk   => clk_game,
+            reset => reset_sync,
 
-            piece_x      => x_pos,
-            piece_y      => y_pos,
-            piece_mask   => shape_16b,
+            piece_x     => x_pos,
+            piece_y     => y_pos,
+            piece_mask  => shape_16b,
+            piece_color => piece_color,
 
             lock_piece   => lock_request,
             clear_enable => clear_enable,
 
-            any_row_full => any_row_full,   -- ✅ nuevo
+            any_row_full => any_row_full,
 
-            board_out    => board_flat
+            board_filled_flat => board_filled_flat,
+            board_color_flat  => board_color_flat
         );
 
     -------------------------------------------------------------------------
@@ -261,7 +263,7 @@ begin
         );
 
     -------------------------------------------------------------------------
-    -- RENDER
+    -- RENDER CON COLOR
     -------------------------------------------------------------------------
     render_inst : entity work.render_unit
         generic map (
@@ -269,11 +271,13 @@ begin
             BOARD_HEIGHT => BOARD_HEIGHT
         )
         port map (
-            board_flat   => board_flat,
+            board_filled_flat => board_filled_flat,
+            board_color_flat  => board_color_flat,
+
             x            => x_pos,
             y            => y_pos,
             shape_16b    => shape_16b,
-            rotation     => rotation,
+            piece_color  => piece_color,
 
             pixel_x      => pixel_x,
             pixel_y      => pixel_y,

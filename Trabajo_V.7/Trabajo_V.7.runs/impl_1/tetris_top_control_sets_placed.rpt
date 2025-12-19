@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date         : Thu Dec 18 19:29:31 2025
+| Date         : Fri Dec 19 12:09:39 2025
 | Host         : DESKTOP-KCUO3LM running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file tetris_top_control_sets_placed.rpt
 | Design       : tetris_top
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |     7 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    30 |
+| Unused register locations in slices containing registers |    27 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -59,10 +59,10 @@ Table of Contents
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |               3 |            1 |
-| No           | No                    | Yes                    |             153 |           58 |
-| No           | Yes                   | No                     |             201 |          144 |
+| No           | No                    | Yes                    |             160 |           47 |
+| No           | Yes                   | No                     |             801 |          527 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |             101 |           29 |
+| Yes          | No                    | Yes                    |              81 |           22 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -70,16 +70,16 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------------+-----------------------------------------+-----------------------+------------------+----------------+--------------+
-|         Clock Signal        |              Enable Signal              |    Set/Reset Signal   | Slice Load Count | Bel Load Count | Bels / Slice |
-+-----------------------------+-----------------------------------------+-----------------------+------------------+----------------+--------------+
-|  clk_100MHz_IBUF            |                                         |                       |                1 |              3 |         3.00 |
-|  u_clk_wiz/inst/clk_out1    | game_ctrl_inst//i__n_0                  | board_inst/reset_sync |                2 |              5 |         2.50 |
-|  vga_inst/pix_clk_i_reg_n_0 |                                         | board_inst/reset_sync |                4 |             10 |         2.50 |
-|  vga_inst/pix_clk_i_reg_n_0 | vga_inst/v_count                        | board_inst/reset_sync |                4 |             10 |         2.50 |
-|  u_clk_wiz/inst/clk_out1    | piece_ctrl_inst/x_reg[0]_i_1_n_0        | board_inst/reset_sync |               11 |             42 |         3.82 |
-|  u_clk_wiz/inst/clk_out1    | input_ctrl_inst/FSM_onehot_state_reg[0] | board_inst/reset_sync |               12 |             44 |         3.67 |
-|  u_clk_wiz/inst/clk_out1    |                                         | board_inst/reset_sync |              198 |            344 |         1.74 |
-+-----------------------------+-----------------------------------------+-----------------------+------------------+----------------+--------------+
++-----------------------------+--------------------------------------------+-----------------------+------------------+----------------+--------------+
+|         Clock Signal        |                Enable Signal               |    Set/Reset Signal   | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------------------+--------------------------------------------+-----------------------+------------------+----------------+--------------+
+|  clk_100MHz_IBUF            |                                            |                       |                1 |              3 |         3.00 |
+|  u_clk_wiz/inst/clk_out1    | game_ctrl_inst/FSM_onehot_state[4]_i_1_n_0 | board_inst/reset_sync |                2 |              5 |         2.50 |
+|  vga_inst/pix_clk_i_reg_n_0 |                                            | board_inst/reset_sync |                3 |             10 |         3.33 |
+|  vga_inst/pix_clk_i_reg_n_0 | vga_inst/v_count                           | board_inst/reset_sync |                3 |             10 |         3.33 |
+|  u_clk_wiz/inst/clk_out1    | piece_ctrl_inst/y_reg[31]_i_1_n_0          | board_inst/reset_sync |                8 |             32 |         4.00 |
+|  u_clk_wiz/inst/clk_out1    | input_ctrl_inst/E[0]                       | board_inst/reset_sync |                9 |             34 |         3.78 |
+|  u_clk_wiz/inst/clk_out1    |                                            | board_inst/reset_sync |              571 |            951 |         1.67 |
++-----------------------------+--------------------------------------------+-----------------------+------------------+----------------+--------------+
 
 

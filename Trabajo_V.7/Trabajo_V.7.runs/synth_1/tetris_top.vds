@@ -3,8 +3,8 @@
 # SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Thu Dec 18 19:26:57 2025
-# Process ID         : 34444
+# Start of session at: Fri Dec 19 12:03:13 2025
+# Process ID         : 27640
 # Current directory  : C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.runs/synth_1
 # Command line       : vivado.exe -log tetris_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source tetris_top.tcl
 # Log file           : C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.runs/synth_1/tetris_top.vds
@@ -19,7 +19,7 @@
 # Host memory        : 34046 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 36193 MB
-# Available Virtual  : 18660 MB
+# Available Virtual  : 19612 MB
 #-----------------------------------------------------------
 source tetris_top.tcl -notrace
 Command: read_checkpoint -auto_incremental -incremental C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/utils_1/imports/synth_1/tetris_top.dcp
@@ -32,17 +32,15 @@ INFO: [IP_Flow 19-2162] IP 'clk_wiz_tetris' is locked:
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
-INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
-INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 28788
+INFO: [Synth 8-7075] Helper process launched with PID 8408
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1212.137 ; gain = 494.645
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1210.879 ; gain = 492.414
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'tetris_top' [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/10_tetris_top.vhd:28]
-INFO: [Synth 8-3491] module 'clk_wiz_tetris' declared at 'C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.runs/synth_1/.Xil/Vivado-34444-DESKTOP-KCUO3LM/realtime/clk_wiz_tetris_stub.vhdl:6' bound to instance 'u_clk_wiz' of component 'clk_wiz_tetris' [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/10_tetris_top.vhd:85]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_tetris' [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.runs/synth_1/.Xil/Vivado-34444-DESKTOP-KCUO3LM/realtime/clk_wiz_tetris_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'clk_wiz_tetris' declared at 'C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.runs/synth_1/.Xil/Vivado-27640-DESKTOP-KCUO3LM/realtime/clk_wiz_tetris_stub.vhdl:6' bound to instance 'u_clk_wiz' of component 'clk_wiz_tetris' [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/10_tetris_top.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_tetris' [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.runs/synth_1/.Xil/Vivado-27640-DESKTOP-KCUO3LM/realtime/clk_wiz_tetris_stub.vhdl:16]
 INFO: [Synth 8-638] synthesizing module 'clk_divider' [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/1_clock_divider.vhd:19]
 INFO: [Synth 8-256] done synthesizing module 'clk_divider' (0#1) [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/1_clock_divider.vhd:19]
 INFO: [Synth 8-638] synthesizing module 'input_controller' [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/2_input_controller.vhd:28]
@@ -51,10 +49,10 @@ INFO: [Synth 8-638] synthesizing module 'lfsr_random' [C:/Users/User/Documents/T
 INFO: [Synth 8-256] done synthesizing module 'lfsr_random' (0#1) [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/4_lfsr_random.vhd:14]
 INFO: [Synth 8-638] synthesizing module 'game_controller' [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/8_game_controller.vhd:23]
 INFO: [Synth 8-256] done synthesizing module 'game_controller' (0#1) [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/8_game_controller.vhd:23]
-INFO: [Synth 8-638] synthesizing module 'current_piece_ctrl' [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/5_current_piece_control.vhd:47]
+INFO: [Synth 8-638] synthesizing module 'current_piece_ctrl' [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/5_current_piece_control.vhd:40]
 	Parameter BOARD_WIDTH bound to: 10 - type: integer 
 	Parameter BOARD_HEIGHT bound to: 20 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'current_piece_ctrl' (0#1) [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/5_current_piece_control.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'current_piece_ctrl' (0#1) [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/5_current_piece_control.vhd:40]
 INFO: [Synth 8-638] synthesizing module 'piece_rom' [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/3_piece_rotator.vhd:13]
 INFO: [Synth 8-256] done synthesizing module 'piece_rom' (0#1) [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/3_piece_rotator.vhd:13]
 INFO: [Synth 8-638] synthesizing module 'collision_detector' [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/6_collision_detector.vhd:25]
@@ -65,49 +63,17 @@ INFO: [Synth 8-638] synthesizing module 'piece_rom__parameterized1' [C:/Users/Us
 INFO: [Synth 8-256] done synthesizing module 'piece_rom__parameterized1' (0#1) [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/3_piece_rotator.vhd:13]
 INFO: [Synth 8-3491] module 'piece_rom' declared at 'C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/3_piece_rotator.vhd:4' bound to instance 'NEXT_SHAPE' of component 'piece_rom' [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/6_collision_detector.vhd:103]
 INFO: [Synth 8-256] done synthesizing module 'collision_detector' (0#1) [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/6_collision_detector.vhd:25]
-INFO: [Synth 8-638] synthesizing module 'board_memory' [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/7_board_memory.vhd:31]
+INFO: [Synth 8-638] synthesizing module 'board_memory' [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/7_board_memory.vhd:29]
 	Parameter BOARD_WIDTH bound to: 10 - type: integer 
 	Parameter BOARD_HEIGHT bound to: 20 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'board_memory' (0#1) [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/7_board_memory.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'board_memory' (0#1) [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/7_board_memory.vhd:29]
 INFO: [Synth 8-638] synthesizing module 'vga_controller' [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/11_vga_controller.vhd:24]
 INFO: [Synth 8-256] done synthesizing module 'vga_controller' (0#1) [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/11_vga_controller.vhd:24]
-INFO: [Synth 8-638] synthesizing module 'render_unit' [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/9_render_unit.vhd:25]
+INFO: [Synth 8-638] synthesizing module 'render_unit' [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/9_render_unit.vhd:30]
 	Parameter BOARD_WIDTH bound to: 10 - type: integer 
 	Parameter BOARD_HEIGHT bound to: 20 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'render_unit' (0#1) [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/9_render_unit.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'render_unit' (0#1) [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/9_render_unit.vhd:30]
 INFO: [Synth 8-256] done synthesizing module 'tetris_top' (0#1) [C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/10_tetris_top.vhd:28]
-WARNING: [Synth 8-7129] Port rotation[31] in module render_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rotation[30] in module render_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rotation[29] in module render_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rotation[28] in module render_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rotation[27] in module render_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rotation[26] in module render_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rotation[25] in module render_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rotation[24] in module render_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rotation[23] in module render_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rotation[22] in module render_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rotation[21] in module render_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rotation[20] in module render_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rotation[19] in module render_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rotation[18] in module render_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rotation[17] in module render_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rotation[16] in module render_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rotation[15] in module render_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rotation[14] in module render_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rotation[13] in module render_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rotation[12] in module render_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rotation[11] in module render_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rotation[10] in module render_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rotation[9] in module render_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rotation[8] in module render_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rotation[7] in module render_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rotation[6] in module render_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rotation[5] in module render_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rotation[4] in module render_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rotation[3] in module render_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rotation[2] in module render_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rotation[1] in module render_unit is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rotation[0] in module render_unit is either unconnected or has no load
 WARNING: [Synth 8-7129] Port piece_id[31] in module piece_rom__parameterized1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port piece_id[30] in module piece_rom__parameterized1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port piece_id[29] in module piece_rom__parameterized1 is either unconnected or has no load
@@ -176,20 +142,52 @@ WARNING: [Synth 8-7129] Port piece_id[26] in module piece_rom is either unconnec
 WARNING: [Synth 8-7129] Port piece_id[25] in module piece_rom is either unconnected or has no load
 WARNING: [Synth 8-7129] Port piece_id[24] in module piece_rom is either unconnected or has no load
 WARNING: [Synth 8-7129] Port piece_id[23] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port piece_id[22] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port piece_id[21] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port piece_id[20] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port piece_id[19] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port piece_id[18] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port piece_id[17] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port piece_id[16] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port piece_id[15] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port piece_id[14] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port piece_id[13] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port piece_id[12] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port piece_id[11] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port piece_id[10] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port piece_id[9] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port piece_id[8] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port piece_id[7] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port piece_id[6] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port piece_id[5] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port piece_id[4] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port piece_id[3] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rotation[31] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rotation[30] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rotation[29] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rotation[28] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rotation[27] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rotation[26] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rotation[25] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rotation[24] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rotation[23] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rotation[22] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rotation[21] in module piece_rom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rotation[20] in module piece_rom is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1695.938 ; gain = 978.445
+Finished RTL Elaboration : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2213.496 ; gain = 1495.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1695.938 ; gain = 978.445
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 2213.496 ; gain = 1495.031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1695.938 ; gain = 978.445
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 2213.496 ; gain = 1495.031
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.372 . Memory (MB): peak = 1695.938 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.896 . Memory (MB): peak = 2213.496 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -202,28 +200,40 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/tetris_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1734.676 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 2285.168 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 1734.676 ; gain = 0.000
-INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
-INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.100 . Memory (MB): peak = 2285.168 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1734.676 ; gain = 1017.184
+Finished Constraint Validation : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 2285.168 ; gain = 1566.703
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1734.676 ; gain = 1017.184
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 2285.168 ; gain = 1566.703
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1734.676 ; gain = 1017.184
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 2285.168 ; gain = 1566.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 2441.598 ; gain = 1723.133
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6702] IncrSynth : Over 50% of reference run partitions are impacted by design changes. Reverting to default synthesis
+board_memory__GB2board_memory__GB1collision_detector__GB1collision_detector__GB0IncrSyn: Total reference run partitions are 14, Impacted partitions are 10.
+IncrSyn: List of changed modules: 
+	Changed Module : render_unit
+WARNING: [Synth 8-6702] IncrSynth : Reverting to default synthesis
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 2441.598 ; gain = 1723.133
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'game_controller'
 ---------------------------------------------------------------------------------------------------
@@ -237,46 +247,56 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'game_
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'game_controller'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:50 ; elapsed = 00:00:55 . Memory (MB): peak = 1734.676 ; gain = 1017.184
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:14 ; elapsed = 00:02:24 . Memory (MB): peak = 2441.598 ; gain = 1723.133
 ---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : Change is too high
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   32 Bit       Adders := 94    
-	   3 Input   32 Bit       Adders := 4     
+	   2 Input   32 Bit       Adders := 102   
 	   4 Input   32 Bit       Adders := 1     
+	   3 Input   32 Bit       Adders := 4     
 	   2 Input   31 Bit       Adders := 2     
 	   2 Input   20 Bit       Adders := 4     
 	   2 Input   10 Bit       Adders := 2     
-	   2 Input    6 Bit       Adders := 3     
-	   2 Input    5 Bit       Adders := 3     
 	   2 Input    3 Bit       Adders := 2     
 	   2 Input    2 Bit       Adders := 1     
 +---XORs : 
 	   4 Input      1 Bit         XORs := 1     
 +---Registers : 
-	               32 Bit    Registers := 4     
+	               32 Bit    Registers := 6     
 	               20 Bit    Registers := 4     
 	               10 Bit    Registers := 2     
 	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 201   
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 221   
+	                1 Bit    Registers := 222   
 +---Multipliers : 
 	               5x32  Multipliers := 9     
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 3     
+	   2 Input   32 Bit        Muxes := 9     
 	   2 Input   31 Bit        Muxes := 2     
 	   2 Input   20 Bit        Muxes := 4     
 	   7 Input   16 Bit        Muxes := 3     
 	   7 Input   15 Bit        Muxes := 6     
-	   2 Input   12 Bit        Muxes := 3     
 	   5 Input    5 Bit        Muxes := 1     
 	   2 Input    5 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 12980 
 	   5 Input    3 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 1     
 	   2 Input    2 Bit        Muxes := 18    
-	   2 Input    1 Bit        Muxes := 11404 
+	   2 Input    1 Bit        Muxes := 14850 
 	   3 Input    1 Bit        Muxes := 60    
 	   5 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
@@ -301,27 +321,178 @@ INFO: [Synth 8-5544] ROM "TETROMINOS[0][1]" won't be mapped to Block RAM because
 INFO: [Synth 8-5544] ROM "TETROMINOS[0][2]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "TETROMINOS[0][3]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row3_out[31] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row3_out[30] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row3_out[29] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row3_out[28] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row3_out[27] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row3_out[26] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row3_out[25] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row3_out[24] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row3_out[23] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row3_out[22] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row3_out[21] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row3_out[20] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row3_out[19] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row3_out[18] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row3_out[17] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row3_out[16] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row3_out[15] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row3_out[14] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row3_out[13] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row3_out[12] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row3_out[11] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row3_out[10] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row3_out[9] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row3_out[8] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row3_out[7] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row3_out[6] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row3_out[5] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row[31] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row[30] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row[29] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row[28] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row[27] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row[26] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row[25] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row[24] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row[23] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row[22] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row[21] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row[20] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row[19] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row[18] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row[17] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row[16] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row[15] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row[14] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row[13] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row[12] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row[11] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row[10] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row[9] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row[8] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row[7] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row[6] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row[5] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row[4] driven by constant 1
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row[3] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port write_row[2] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port O234[31] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port O234[30] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port O234[29] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port O234[28] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port O234[27] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port O234[26] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port O234[25] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port O234[24] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port O234[23] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port O234[22] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port O234[21] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port O234[20] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port O234[19] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port O234[18] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port O234[17] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port O234[16] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port O234[15] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port O234[14] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port O234[13] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port O234[12] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port O234[11] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port O234[10] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port O234[9] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port O234[8] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port O234[7] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port O234[6] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port O234[5] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port O234[4] driven by constant 1
+WARNING: [Synth 8-3917] design board_memory__GB4 has port O234[3] driven by constant 0
+WARNING: [Synth 8-3917] design board_memory__GB4 has port O234[2] driven by constant 0
+INFO: [Synth 8-5544] ROM "TETROMINOS[0][1]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "TETROMINOS[0][2]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "TETROMINOS[0][3]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/color_reg_reg[0]' (FDCE) to 'piece_ctrl_inst/piece_id_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/color_reg_reg[1]' (FDCE) to 'piece_ctrl_inst/piece_id_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/color_reg_reg[2]' (FDCE) to 'piece_ctrl_inst/piece_id_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/piece_id_reg_reg[3]' (FDCE) to 'piece_ctrl_inst/piece_id_reg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/piece_id_reg_reg[4]' (FDCE) to 'piece_ctrl_inst/piece_id_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/piece_id_reg_reg[5]' (FDCE) to 'piece_ctrl_inst/piece_id_reg_reg[6]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/piece_id_reg_reg[6]' (FDCE) to 'piece_ctrl_inst/piece_id_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/piece_id_reg_reg[7]' (FDCE) to 'piece_ctrl_inst/piece_id_reg_reg[8]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/piece_id_reg_reg[8]' (FDCE) to 'piece_ctrl_inst/piece_id_reg_reg[9]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/piece_id_reg_reg[9]' (FDCE) to 'piece_ctrl_inst/piece_id_reg_reg[10]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/piece_id_reg_reg[10]' (FDCE) to 'piece_ctrl_inst/piece_id_reg_reg[11]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/piece_id_reg_reg[11]' (FDCE) to 'piece_ctrl_inst/piece_id_reg_reg[12]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/piece_id_reg_reg[12]' (FDCE) to 'piece_ctrl_inst/piece_id_reg_reg[13]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/piece_id_reg_reg[13]' (FDCE) to 'piece_ctrl_inst/piece_id_reg_reg[14]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/piece_id_reg_reg[14]' (FDCE) to 'piece_ctrl_inst/piece_id_reg_reg[15]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/piece_id_reg_reg[15]' (FDCE) to 'piece_ctrl_inst/piece_id_reg_reg[16]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/piece_id_reg_reg[16]' (FDCE) to 'piece_ctrl_inst/piece_id_reg_reg[17]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/piece_id_reg_reg[17]' (FDCE) to 'piece_ctrl_inst/piece_id_reg_reg[18]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/piece_id_reg_reg[18]' (FDCE) to 'piece_ctrl_inst/piece_id_reg_reg[19]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/piece_id_reg_reg[19]' (FDCE) to 'piece_ctrl_inst/piece_id_reg_reg[20]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/piece_id_reg_reg[20]' (FDCE) to 'piece_ctrl_inst/piece_id_reg_reg[21]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/piece_id_reg_reg[21]' (FDCE) to 'piece_ctrl_inst/piece_id_reg_reg[22]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/piece_id_reg_reg[22]' (FDCE) to 'piece_ctrl_inst/piece_id_reg_reg[23]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/piece_id_reg_reg[23]' (FDCE) to 'piece_ctrl_inst/piece_id_reg_reg[24]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/piece_id_reg_reg[24]' (FDCE) to 'piece_ctrl_inst/piece_id_reg_reg[25]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/piece_id_reg_reg[25]' (FDCE) to 'piece_ctrl_inst/piece_id_reg_reg[26]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/piece_id_reg_reg[26]' (FDCE) to 'piece_ctrl_inst/piece_id_reg_reg[27]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/piece_id_reg_reg[27]' (FDCE) to 'piece_ctrl_inst/piece_id_reg_reg[28]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/piece_id_reg_reg[28]' (FDCE) to 'piece_ctrl_inst/piece_id_reg_reg[29]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/piece_id_reg_reg[29]' (FDCE) to 'piece_ctrl_inst/piece_id_reg_reg[30]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/piece_id_reg_reg[30]' (FDCE) to 'piece_ctrl_inst/piece_id_reg_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\piece_ctrl_inst/piece_id_reg_reg[31] )
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/rot_reg_reg[2]' (FDCE) to 'piece_ctrl_inst/rot_reg_reg[31]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/rot_reg_reg[3]' (FDCE) to 'piece_ctrl_inst/rot_reg_reg[31]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/rot_reg_reg[4]' (FDCE) to 'piece_ctrl_inst/rot_reg_reg[31]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/rot_reg_reg[5]' (FDCE) to 'piece_ctrl_inst/rot_reg_reg[31]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/rot_reg_reg[6]' (FDCE) to 'piece_ctrl_inst/rot_reg_reg[31]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/rot_reg_reg[7]' (FDCE) to 'piece_ctrl_inst/rot_reg_reg[31]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/rot_reg_reg[8]' (FDCE) to 'piece_ctrl_inst/rot_reg_reg[31]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/rot_reg_reg[9]' (FDCE) to 'piece_ctrl_inst/rot_reg_reg[31]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/rot_reg_reg[10]' (FDCE) to 'piece_ctrl_inst/rot_reg_reg[31]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/rot_reg_reg[11]' (FDCE) to 'piece_ctrl_inst/rot_reg_reg[31]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/rot_reg_reg[12]' (FDCE) to 'piece_ctrl_inst/rot_reg_reg[31]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/rot_reg_reg[13]' (FDCE) to 'piece_ctrl_inst/rot_reg_reg[31]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/rot_reg_reg[14]' (FDCE) to 'piece_ctrl_inst/rot_reg_reg[31]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/rot_reg_reg[15]' (FDCE) to 'piece_ctrl_inst/rot_reg_reg[31]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/rot_reg_reg[16]' (FDCE) to 'piece_ctrl_inst/rot_reg_reg[31]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/rot_reg_reg[17]' (FDCE) to 'piece_ctrl_inst/rot_reg_reg[31]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/rot_reg_reg[18]' (FDCE) to 'piece_ctrl_inst/rot_reg_reg[31]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/rot_reg_reg[19]' (FDCE) to 'piece_ctrl_inst/rot_reg_reg[31]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/rot_reg_reg[20]' (FDCE) to 'piece_ctrl_inst/rot_reg_reg[31]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/rot_reg_reg[21]' (FDCE) to 'piece_ctrl_inst/rot_reg_reg[31]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/rot_reg_reg[22]' (FDCE) to 'piece_ctrl_inst/rot_reg_reg[31]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/rot_reg_reg[23]' (FDCE) to 'piece_ctrl_inst/rot_reg_reg[31]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/rot_reg_reg[24]' (FDCE) to 'piece_ctrl_inst/rot_reg_reg[31]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/rot_reg_reg[25]' (FDCE) to 'piece_ctrl_inst/rot_reg_reg[31]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/rot_reg_reg[26]' (FDCE) to 'piece_ctrl_inst/rot_reg_reg[31]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/rot_reg_reg[27]' (FDCE) to 'piece_ctrl_inst/rot_reg_reg[31]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/rot_reg_reg[28]' (FDCE) to 'piece_ctrl_inst/rot_reg_reg[31]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/rot_reg_reg[29]' (FDCE) to 'piece_ctrl_inst/rot_reg_reg[31]'
+INFO: [Synth 8-3886] merging instance 'piece_ctrl_inst/rot_reg_reg[30]' (FDCE) to 'piece_ctrl_inst/rot_reg_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\piece_ctrl_inst/rot_reg_reg[31] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:23 ; elapsed = 00:01:31 . Memory (MB): peak = 1734.676 ; gain = 1017.184
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:25 ; elapsed = 00:03:57 . Memory (MB): peak = 2441.598 ; gain = 1723.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:28 ; elapsed = 00:01:36 . Memory (MB): peak = 1734.676 ; gain = 1017.184
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:30 ; elapsed = 00:04:03 . Memory (MB): peak = 2441.598 ; gain = 1723.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:31 ; elapsed = 00:01:39 . Memory (MB): peak = 1747.633 ; gain = 1030.141
+Finished Timing Optimization : Time (s): cpu = 00:04:24 ; elapsed = 00:04:59 . Memory (MB): peak = 2540.020 ; gain = 1821.555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:35 ; elapsed = 00:01:43 . Memory (MB): peak = 2019.742 ; gain = 1302.250
+Finished Technology Mapping : Time (s): cpu = 00:04:26 ; elapsed = 00:05:16 . Memory (MB): peak = 2540.020 ; gain = 1821.555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -339,37 +510,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:38 ; elapsed = 00:01:46 . Memory (MB): peak = 2034.320 ; gain = 1316.828
+Finished IO Insertion : Time (s): cpu = 00:04:29 ; elapsed = 00:05:20 . Memory (MB): peak = 2540.020 ; gain = 1821.555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:38 ; elapsed = 00:01:46 . Memory (MB): peak = 2034.320 ; gain = 1316.828
+Finished Renaming Generated Instances : Time (s): cpu = 00:04:29 ; elapsed = 00:05:20 . Memory (MB): peak = 2540.020 ; gain = 1821.555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:38 ; elapsed = 00:01:47 . Memory (MB): peak = 2034.320 ; gain = 1316.828
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:30 ; elapsed = 00:05:21 . Memory (MB): peak = 2540.020 ; gain = 1821.555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:38 ; elapsed = 00:01:47 . Memory (MB): peak = 2034.320 ; gain = 1316.828
+Finished Renaming Generated Ports : Time (s): cpu = 00:04:30 ; elapsed = 00:05:21 . Memory (MB): peak = 2540.020 ; gain = 1821.555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:38 ; elapsed = 00:01:47 . Memory (MB): peak = 2034.320 ; gain = 1316.828
+Finished Handling Custom Attributes : Time (s): cpu = 00:04:31 ; elapsed = 00:05:21 . Memory (MB): peak = 2540.020 ; gain = 1821.555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:38 ; elapsed = 00:01:47 . Memory (MB): peak = 2034.320 ; gain = 1316.828
+Finished Renaming Generated Nets : Time (s): cpu = 00:04:31 ; elapsed = 00:05:21 . Memory (MB): peak = 2540.020 ; gain = 1821.555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -387,44 +558,44 @@ Report Cell Usage:
 |      |Cell                |Count |
 +------+--------------------+------+
 |1     |clk_wiz_tetris_bbox |     1|
-|2     |CARRY4              |   528|
-|3     |LUT1                |   521|
-|4     |LUT2                |  1568|
-|5     |LUT3                |  1004|
-|6     |LUT4                |   527|
-|7     |LUT5                |   902|
-|8     |LUT6                |  3901|
-|9     |MUXF7               |   620|
-|10    |MUXF8               |   235|
-|11    |FDCE                |   240|
-|12    |FDPE                |    14|
-|13    |FDRE                |   204|
+|2     |CARRY4              |   618|
+|3     |LUT1                |   534|
+|4     |LUT2                |  2376|
+|5     |LUT3                |  2095|
+|6     |LUT4                |  1322|
+|7     |LUT5                |  3071|
+|8     |LUT6                |  6178|
+|9     |MUXF7               |   709|
+|10    |MUXF8               |   256|
+|11    |FDCE                |   232|
+|12    |FDPE                |     9|
+|13    |FDRE                |   804|
 |14    |IBUF                |     5|
 |15    |OBUF                |    14|
 +------+--------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:38 ; elapsed = 00:01:47 . Memory (MB): peak = 2034.320 ; gain = 1316.828
+Finished Writing Synthesis Report : Time (s): cpu = 00:04:31 ; elapsed = 00:05:21 . Memory (MB): peak = 2540.020 ; gain = 1821.555
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 101 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:21 ; elapsed = 00:01:43 . Memory (MB): peak = 2034.320 ; gain = 1278.090
-Synthesis Optimization Complete : Time (s): cpu = 00:01:38 ; elapsed = 00:01:47 . Memory (MB): peak = 2034.320 ; gain = 1316.828
+Synthesis finished with 0 errors, 0 critical warnings and 189 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:56 ; elapsed = 00:05:14 . Memory (MB): peak = 2540.020 ; gain = 1749.883
+Synthesis Optimization Complete : Time (s): cpu = 00:04:31 ; elapsed = 00:05:22 . Memory (MB): peak = 2540.020 ; gain = 1821.555
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 2036.523 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 1383 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.101 . Memory (MB): peak = 2540.020 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1583 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2039.684 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2540.020 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 32d71d6e
+Synth Design complete | Checksum: fddb3b96
 INFO: [Common 17-83] Releasing license: Synthesis
-61 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+123 Infos, 189 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:42 ; elapsed = 00:01:52 . Memory (MB): peak = 2039.684 ; gain = 1524.812
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 2039.684 ; gain = 0.000
+synth_design: Time (s): cpu = 00:04:34 ; elapsed = 00:05:27 . Memory (MB): peak = 2540.020 ; gain = 2025.789
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 2540.020 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.runs/synth_1/tetris_top.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file tetris_top_utilization_synth.rpt -pb tetris_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Dec 18 19:28:55 2025...
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 19 12:08:52 2025...

@@ -3,8 +3,8 @@
 # SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Thu Dec 18 19:26:57 2025
-# Process ID         : 34444
+# Start of session at: Fri Dec 19 12:03:13 2025
+# Process ID         : 27640
 # Current directory  : C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.runs/synth_1
 # Command line       : vivado.exe -log tetris_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source tetris_top.tcl
 # Log file           : C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.runs/synth_1/tetris_top.vds
@@ -19,6 +19,6 @@
 # Host memory        : 34046 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 36193 MB
-# Available Virtual  : 18660 MB
+# Available Virtual  : 19612 MB
 #-----------------------------------------------------------
 source tetris_top.tcl -notrace
