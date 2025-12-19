@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date             : Fri Dec 19 12:11:24 2025
+| Date             : Fri Dec 19 13:11:27 2025
 | Host             : DESKTOP-KCUO3LM running 64-bit major release  (build 9200)
 | Command          : report_power -file tetris_top_power_routed.rpt -pb tetris_top_power_summary_routed.pb -rpx tetris_top_power_routed.rpx
 | Design           : tetris_top
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.252        |
+| Total On-Chip Power (W)  | 0.253        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.154        |
+| Dynamic (W)              | 0.155        |
 | Device Static (W)        | 0.098        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 83.9         |
-| Junction Temperature (C) | 26.1         |
+| Max Ambient (C)          | 83.8         |
+| Junction Temperature (C) | 26.2         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -53,17 +53,17 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.004 |        6 |       --- |             --- |
-| Slice Logic    |     0.014 |    18215 |       --- |             --- |
-|   LUT as Logic |     0.013 |    12818 |     63400 |           20.22 |
-|   CARRY4       |    <0.001 |      618 |     15850 |            3.90 |
+| Slice Logic    |     0.013 |    18499 |       --- |             --- |
+|   LUT as Logic |     0.012 |    13009 |     63400 |           20.52 |
+|   CARRY4       |    <0.001 |      639 |     15850 |            4.03 |
 |   F7/F8 Muxes  |    <0.001 |      965 |     63400 |            1.52 |
-|   Register     |    <0.001 |     1045 |    126800 |            0.82 |
-|   Others       |     0.000 |       13 |       --- |             --- |
-| Signals        |     0.020 |    15080 |       --- |             --- |
+|   Register     |    <0.001 |     1084 |    126800 |            0.85 |
+|   Others       |     0.000 |       17 |       --- |             --- |
+| Signals        |     0.019 |    15249 |       --- |             --- |
 | MMCM           |     0.116 |        1 |         6 |           16.67 |
-| I/O            |    <0.001 |       20 |       210 |            9.52 |
+| I/O            |     0.004 |       31 |       210 |           14.76 |
 | Static Power   |     0.098 |          |           |                 |
-| Total          |     0.252 |          |           |                 |
+| Total          |     0.253 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,9 +73,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.054 |       0.038 |      0.015 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.082 |       0.064 |      0.018 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.051 |       0.036 |      0.015 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.083 |       0.064 |      0.018 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.005 |       0.001 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -145,12 +145,12 @@ Table of Contents
 +-------------------+-----------+
 | Name              | Power (W) |
 +-------------------+-----------+
-| tetris_top        |     0.154 |
-|   board_inst      |     0.011 |
-|   piece_ctrl_inst |     0.023 |
+| tetris_top        |     0.155 |
+|   board_inst      |     0.009 |
+|   piece_ctrl_inst |     0.021 |
 |   u_clk_wiz       |     0.116 |
 |     inst          |     0.116 |
-|   vga_inst        |     0.004 |
+|   vga_inst        |     0.003 |
 +-------------------+-----------+
 
 

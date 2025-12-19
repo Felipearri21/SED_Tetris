@@ -86,6 +86,8 @@ read_vhdl -library xil_defaultlib {
   C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/3_piece_rotator.vhd
   C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/6_collision_detector.vhd
   C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/7_board_memory.vhd
+  C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/score_counter.vhd
+  C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/seven_seg_driver.vhd
   C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/11_vga_controller.vhd
   C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/9_render_unit.vhd
   C:/Users/User/Documents/Trabajo_SED_Tetris/Trabajo_V.7/Trabajo_V.7.srcs/sources_1/new/10_tetris_top.vhd

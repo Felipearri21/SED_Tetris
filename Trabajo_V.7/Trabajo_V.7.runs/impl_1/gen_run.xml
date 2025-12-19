@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1766142192">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1766145778">
   <File Type="PA-TCL" Name="tetris_top.tcl"/>
   <File Type="REPORTS-TCL" Name="tetris_top_reports.tcl"/>
   <File Type="INIT-TIMING" Name="tetris_top_timing_summary_init.rpt"/>
@@ -156,6 +156,18 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/7_board_memory.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/score_counter.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/seven_seg_driver.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>

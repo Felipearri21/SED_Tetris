@@ -21,7 +21,11 @@ entity tetris_top is
         vga_vsync : out std_logic;
         vga_r     : out std_logic_vector(3 downto 0);
         vga_g     : out std_logic_vector(3 downto 0);
-        vga_b     : out std_logic_vector(3 downto 0)
+        vga_b     : out std_logic_vector(3 downto 0);
+
+        -- 7 segmentos (4 dígitos)
+        seg : out std_logic_vector(6 downto 0);
+        an  : out std_logic_vector(3 downto 0)
     );
 end entity;
 
@@ -63,12 +67,19 @@ architecture RTL of tetris_top is
     signal clear_enable    : std_logic;
     signal lock_request    : std_logic;
 
-    signal any_row_full : std_logic;
+    signal any_row_full    : std_logic;
+    signal lines_cleared   : integer range 0 to 4;
 
     signal board_filled_flat : std_logic_vector(BOARD_WIDTH*BOARD_HEIGHT-1 downto 0);
     signal board_color_flat  : std_logic_vector(BOARD_WIDTH*BOARD_HEIGHT*3-1 downto 0);
 
     signal shape_16b : std_logic_vector(15 downto 0);
+
+    -------------------------------------------------------------------------
+    -- SCORE
+    -------------------------------------------------------------------------
+    signal score_pulse : std_logic;
+    signal score_value : integer range 0 to 9999;
 
     -------------------------------------------------------------------------
     -- VGA
@@ -144,9 +155,12 @@ begin
 
             lock_request    => lock_request,
             any_row_cleared => any_row_full,
+            lines_cleared   => lines_cleared,
 
             spawn_new_piece => spawn_new_piece,
             do_line_clear   => clear_enable,
+
+            score_pulse     => score_pulse,
 
             game_state => open
         );
@@ -239,10 +253,34 @@ begin
             lock_piece   => lock_request,
             clear_enable => clear_enable,
 
-            any_row_full => any_row_full,
+            any_row_full  => any_row_full,
+            lines_cleared => lines_cleared,
 
             board_filled_flat => board_filled_flat,
             board_color_flat  => board_color_flat
+        );
+
+    -------------------------------------------------------------------------
+    -- SCORE COUNTER (NUEVO)
+    -------------------------------------------------------------------------
+    score_inst : entity work.score_counter
+        port map (
+            clk           => clk_game,
+            reset         => reset_sync,
+            score_pulse   => score_pulse,
+            lines_cleared => lines_cleared,
+            score         => score_value
+        );
+
+    -------------------------------------------------------------------------
+    -- SEVEN SEG DRIVER (NUEVO)
+    -------------------------------------------------------------------------
+    seg_inst : entity work.seven_seg_driver
+        port map (
+            clk   => clk_game,
+            value => score_value,
+            seg   => seg,
+            an    => an
         );
 
     -------------------------------------------------------------------------

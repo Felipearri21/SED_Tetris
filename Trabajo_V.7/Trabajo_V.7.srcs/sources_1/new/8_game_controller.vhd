@@ -10,10 +10,14 @@ entity game_controller is
         -- Desde pieza / tablero
         lock_request    : in std_logic;
         any_row_cleared : in std_logic;
+        lines_cleared   : in integer range 0 to 4;
 
         -- Control
         spawn_new_piece : out std_logic;
         do_line_clear   : out std_logic;
+
+        -- Puntuación
+        score_pulse     : out std_logic;
 
         -- Debug
         game_state : out std_logic_vector(2 downto 0)
@@ -82,6 +86,10 @@ begin
     -------------------------------------------------------------------------
     spawn_new_piece <= '1' when state = S_SPAWN      else '0';
     do_line_clear   <= '1' when state = S_LINE_CLEAR else '0';
+
+    -- pulso 1 ciclo cuando se ejecuta el estado de borrado
+    -- (el score_counter usará lines_cleared para sumar lo que toque)
+    score_pulse     <= '1' when state = S_LINE_CLEAR else '0';
 
     with state select
         game_state <=
