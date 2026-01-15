@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu Jan 15 11:39:37 2026
+# Process ID: 25716
+# Current directory: C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Trabajo_Grupal_Tetris/Trabajo_SED_Nexys4_DDR
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent25720 C:\Users\G531GW\Desktop\Universidad\7_Septimo_Semestre\Sistemas_Electronicos_Digitales_SED\FPGAs\Trabajo_Grupal_Tetris\Trabajo_SED_Nexys4_DDR\Trabajo_SED_Nexys4_DDR.xpr
+# Log file: C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Trabajo_Grupal_Tetris/Trabajo_SED_Nexys4_DDR/vivado.log
+# Journal file: C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Trabajo_Grupal_Tetris/Trabajo_SED_Nexys4_DDR\vivado.jou
+# Running On        :Pepo
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26100
+# Processor Detail  :Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
+# CPU Frequency     :2592 MHz
+# CPU Physical cores:6
+# CPU Logical cores :12
+# Host memory       :17023 MB
+# Swap memory       :3489 MB
+# Total Virtual     :20513 MB
+# Available Virtual :5708 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/G531GW/Desktop/Universidad/7_Septimo_Semestre/Sistemas_Electronicos_Digitales_SED/FPGAs/Trabajo_Grupal_Tetris/Trabajo_SED_Nexys4_DDR/Trabajo_SED_Nexys4_DDR.xpr
+update_compile_order -fileset sources_1
